@@ -8,12 +8,12 @@
 ## Run a single app
 - Subscriber
     - cd ./order-processor
-    - dapr run --app-id order-processor --resources-path ../../../components/ --app-port 5138 -- dotnet run
+    - dapr run --app-id order-processor-sdk --resources-path ../../../components/ --app-port 5138 -- dotnet run
 - Publisher
     - cd ./checkout
     - dapr run --app-id checkout-sdk --resources-path ../../../components/ -- dotnet run
 ## Stop and clean up application processes
-    - dapr stop --app-id order-processor
+    - dapr stop --app-id order-processor-sdk
     - dapr stop --app-id checkout-sdk
 
 ## Ref: https://docs.dapr.io/getting-started/quickstarts/pubsub-quickstart/

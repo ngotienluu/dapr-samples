@@ -12,8 +12,8 @@ for (int i = 1; i <= 10; i++)
     using var client = new DaprClientBuilder().Build();
 
     // publish an event/message using dapr pubsub
-    await client.PublishEventAsync("orderpubsub", "orders", order);
-    Console.WriteLine("publish data: " + order);
+    await client.PublishEventAsync("orderpubsub", "orders-sdk", order);
+    Console.WriteLine("Publish an order: " + order);
     
     await Task.Delay(TimeSpan.FromSeconds(1));
 }

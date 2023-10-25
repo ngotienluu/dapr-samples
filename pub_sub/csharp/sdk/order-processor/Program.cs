@@ -16,9 +16,9 @@ if (app.Environment.IsDevelopment())
 }
 
 // Dapr subscription in [Topic] routes orders topic to this route
-app.MapPost("/orders", [Topic("orderpubsub", "orders")] (Order order) =>
+app.MapPost("/orders", [Topic("orderpubsub", "orders-sdk")] (Order order) =>
 {
-    Console.WriteLine("Subscriber received: " + order);
+    Console.WriteLine("Subcribe an order: " + order);
     return Results.Ok(order);
 });
 

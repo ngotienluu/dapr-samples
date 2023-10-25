@@ -2,12 +2,10 @@ version: 1
 common:
   resourcesPath: ../../components/
 apps:
-  - appID: checkout-sdk
+  - appID: checkout-http
     appDirPath: ./checkout/
     command: ["dotnet", "run"]
-  - appID: order-processor-sdk
+  - appID: order-processor-http
     appDirPath: ./order-processor/
-    appPort: 5138
-    command:
-      - "dotnet"
-      - "run"
+    appPort: 5109
+    command: ["dotnet", "run"]
